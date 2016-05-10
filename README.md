@@ -10,7 +10,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
   - Github Plugin
   - Docker plugin
   
-- Open a terminal or create a job to check what images are present and containers are running : 
+  - Open a terminal or create a job to check what images are present and containers are running : 
 
 
       docker images
@@ -20,7 +20,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
 
   # CONTINOUS INTEGRATION IN JENKINS 
  
-5.Now our requirement is this job contains a sample ionic application which is done using dockerfiles so if any change is happened to the code jenkins should help us to trigger (refer note below) and update our application.Following are the steps to be followed :
+4.Now our requirement is this job contains a sample ionic application which is done using dockerfiles so if any change is happened to the code jenkins should help us to trigger (refer note below) and update our application.Following are the steps to be followed :
   
       A. Create a job in jenkins for example FINAL JOB.
       
