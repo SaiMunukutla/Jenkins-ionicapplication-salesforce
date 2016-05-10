@@ -7,8 +7,8 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
 
 3.Goto dashboard-> manage jenkins->manage plugins->available (install without restart)
   
- # - Github Plugin
- # - Docker plugin
+  - Github Plugin
+  - Docker plugin
   
 - Open a terminal or create a job to check what images are present and containers are running : 
 
