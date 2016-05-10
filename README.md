@@ -16,7 +16,8 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
       
       docker ps
       
- CONTINOUS INTEGRATION IN JENKINS 
+
+CONTINOUS INTEGRATION IN JENKINS 
  
 5.Now our requirement is this job contains a sample ionic application which is done using dockerfiles so if any change is happened to the code jenkins should help us to trigger (refer note below) and update our application.Following are the steps to be followed :
   
