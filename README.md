@@ -90,8 +90,9 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
  
    B. If there are any changes made to any of the above mentioned dockerfiles then the jobs get triggered accordingly. And if     we do not make any changes to any of the dockerfiles in git repositories then we just need to click 'Build now' button of    FINAL JOB.
          
-              
-   Reference : 
-   
+
+   #Reference : 
+
    Refer this github for docker-linking :
+   
      - https://github.com/Vranda2011/Docker/blob/master/ReadMe-Files/Docker_compose_yml.md
