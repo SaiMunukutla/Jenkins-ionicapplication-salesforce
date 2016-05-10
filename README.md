@@ -25,8 +25,10 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
       
       B. Now configure your job in source code management where we have to select git :
            a. Add repositories where our sample ionic application is present and dockerfile
+           
                 - https://github.com/samhitha30/ionic-app.git 
                 - https://github.com/SusrithaMunukutla/ionic-sensorapp.git
+                
            b. Add credentails by clicking Add -> Include username,password,description .
            
       C. Now in Build trigger select Build when a change is pushed to GitHub, when any changes made to our git repository and commit,jenkins helps to trigger and build job with updated code.
