@@ -44,9 +44,9 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
                 docker kill <image-name>
                 docker rm -f <image-name>
                 docker run -i -d -p 8100:8100 --entrypoint=/entrypoint.sh <image-name> -s
-                
-  # CONTINOUS DELIVERY IN JENKINS
-      
+
+# CONTINOUS DELIVERY IN JENKINS
+
       1. Created seperate jobs for all containers : ionic_application , couch_database, sync_gateway, couchbase , talend 
       2. Now this jobs will be executed only when any change happened to dockerfile ie triggers and then executes others jobs .
          -> Following are steps followed in jobs :
