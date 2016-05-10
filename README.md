@@ -24,7 +24,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
   
       A. Create a job in jenkins for example FINAL JOB.
       
-      B. Now configure in source code management select git :
+      B. Now configure your job in source code management where we have to select git :
            a. Add repositories where our sample ionic application is present and dockerfile
                 - https://github.com/samhitha30/ionic-app.git 
                 - https://github.com/SusrithaMunukutla/ionic-sensorapp.git
@@ -39,7 +39,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
       
       E. Now save the job and build 
                        or
-         Make any changes in your git repository and commit job gets triggered and builds.
+         Make any changes in your git repository and commit ,then job gets triggered and builds.
            (a) Now if you have executed job then kill and remove ionic container then run container orelse you will get error rename container:
                 docker kill <image-name>
                 docker rm -f <image-name>
@@ -49,9 +49,9 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
 
       1. Created seperate jobs for all containers : ionic_application , couch_database, sync_gateway, couchbase , talend 
       2. Now this jobs will be executed only when any change happened to dockerfile ie triggers and then executes others jobs .
-         -> Following are steps followed in jobs :
-            A. Now configure in source code management select git :
-                   a. Add repositories where our sample ionic application is present and dockerfile
+         -> Following are steps followed in all above mentioned jobs :
+            A. Now configure your job in source code management where we have to select git :
+                   a. Add repositories where our sample ionic dockerfile is present :
                         - https://github.com/SusrithaMunukutla/ionic-sensorapp.git
                    b. Add credentails by clicking Add -> Include username,password,description .
            
@@ -60,12 +60,10 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
            C. Now in Build -> Add build step -> Execute Shell
                      docker build -t <image-name>
            
-           D. In Post-build actions -> Build other projects -> Projects to be build -> Specify jobs
+           D. In Post-build actions -> Build other projects -> Projects to build -> Specify jobs
                 Specified jobs - docker-compose , FINAL JOB
           
-           E. This way all the jobs are configured using above steps and this jobs gets executed when there are any changes made to dockerfile.
-   
-   
+           E. In this way all the jobs are configured using above steps and these jobs get executed when there are any changes made to dockerfile.
 
 #Limitations :
 
@@ -76,13 +74,17 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
                         
 
 #Note :
-          When Jenkins has to be triggered following are the steps to be followed 
+   A. When Jenkins has to be triggered following are the steps to be followed 
           
-        1. Open Github https://github.com/SusrithaMunukutla/yaml_file
-        2. Go to Settings : https://github.com/SusrithaMunukutla/yaml_file/settings
-        3. Go to Webhooks&Services : https://github.com/SusrithaMunukutla/yaml_file/settings/hooks
+        1. Open Github ->Repository 
+               https://github.com/SusrithaMunukutla/yaml_file
+        2. Go to Settings : 
+               https://github.com/SusrithaMunukutla/yaml_file/settings
+        3. Go to Webhooks&Services :
+               https://github.com/SusrithaMunukutla/yaml_file/settings/hooks
         4. In Services ->Add Service ->Jenkins(GitHub plugin) ->Add Jenkins  hook url :
-                            http://<ip-address>:8080/github-webhook/
-        
+               http://<ip-address>:8080/github-webhook/
+ 
+   B. If there are any changes made to any of the above mentioned dockerfiles then the jobs get triggered accordingly. And if     we do not make any changes to any of the dockerfiles in git repositories then we just need to click 'Build now' button of    FINAL JOB.
          
               
