@@ -1,11 +1,11 @@
 #Following are steps to be followed after launching AMI :
-1.Create an instance using AMI IONICApplication-Salesforce -Jenkins in Sao Paulo region.
+1. Create an instance using AMI IONICApplication-Salesforce -Jenkins in Sao Paulo region.
 
-2.Now have to check whether jenkins is up and running.Open 
+2. Now have to check whether jenkins is up and running.Open 
                           <ipaddress>:8080
 Jenkins dashboard will be opened now we have to manage plugins.Following are the plugins that are to be installed
 
-3.Goto dashboard-> manage jenkins->manage plugins->available (install without restart)
+3. Goto dashboard-> manage jenkins->manage plugins->available (install without restart)
   
   - Github Plugin
   - Docker plugin
@@ -20,7 +20,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
 
   # CONTINOUS INTEGRATION IN JENKINS 
  
-4.Now our requirement is this job contains a sample ionic application which is done using dockerfiles so if any change is happened to the code jenkins should help us to trigger (refer note below) and update our application.Following are the steps to be followed :
+4. Now our requirement is this job contains a sample ionic application which is done using dockerfiles so if any change is happened to the code jenkins should help us to trigger (refer note below) and update our application.Following are the steps to be followed :
   
       A. Create a job in jenkins for example FINAL JOB.
       
