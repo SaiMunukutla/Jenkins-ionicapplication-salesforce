@@ -1,3 +1,4 @@
+#Following are steps to be followed after launching AMI :
 1.Create an instance using AMI IONICApplication-Salesforce -Jenkins in Sao Paulo region.
 
 2.Now have to check whether jenkins is up and running.Open 
@@ -6,8 +7,8 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
 
 3.Goto dashboard-> manage jenkins->manage plugins->available (install without restart)
   
-  - Github Plugin
-  - Docker plugin
+ # - Github Plugin
+ # - Docker plugin
   
 - Open a terminal or create a job to check what images are present and containers are running : 
 
@@ -17,7 +18,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
       docker ps
       
 
-   CONTINOUS INTEGRATION IN JENKINS 
+  # CONTINOUS INTEGRATION IN JENKINS 
  
 5.Now our requirement is this job contains a sample ionic application which is done using dockerfiles so if any change is happened to the code jenkins should help us to trigger (refer note below) and update our application.Following are the steps to be followed :
   
@@ -44,7 +45,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
                 docker rm -f <image-name>
                 docker run -i -d -p 8100:8100 --entrypoint=/entrypoint.sh <image-name> -s
                 
-   CONTINOUS DELIVERY IN JENKINS
+  # CONTINOUS DELIVERY IN JENKINS
       
       1. Created seperate jobs for all containers : ionic_application , couch_database, sync_gateway, couchbase , talend 
       2. Now this jobs will be executed only when any change happened to dockerfile ie triggers and then executes others jobs .
@@ -66,7 +67,7 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
    
    
 
-Limitations :
+#Limitations :
 
  -> Before executing FINAL JOB job make sure all our containers are removed and killed orelse will get  error when job is triggered.
                 docker kill <image-name>
@@ -74,7 +75,7 @@ Limitations :
                 docker run -i -d -p 8100:8100 --entrypoint=/entrypoint.sh <image-tag> -s   
                         
 
-Note :
+#Note :
           When Jenkins has to be triggered following are the steps to be followed 
           
         1. Open Github https://github.com/SusrithaMunukutla/yaml_file
